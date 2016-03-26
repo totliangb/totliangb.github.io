@@ -1,0 +1,22 @@
+body, div {
+	margin: 0px;
+}
+
+.main-content {
+	width: 100%;
+	background-color: #FFFFFF;
+	height: 2000px;
+	overflow: hidden;
+	position:relative;
+}
+.pic-item {
+	position: absolute;
+	margin: 0px;
+	display: inline-block;
+
+	top: 0px;
+	left: 0px;
+}
+.item-flag {
+	background-color: #000000;
+}

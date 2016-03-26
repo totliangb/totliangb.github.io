@@ -105,7 +105,8 @@ $(function() {
 			// 失败 需要增加 新的 元素到数组
 			console.log('check-no');
 			// 
-		if (cartArr.length == 3) { return false; }
+			return false;
+		// if (cartArr.length == 3) { return false; }
 		}
 		console.log('-----------'+cartArr.length+' end '+'----------------');
 		

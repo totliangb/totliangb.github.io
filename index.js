@@ -256,4 +256,9 @@ $(function() {
 
 	init();
 
+	// 窗口 大小 改变
+	$(window).resize(function(){
+		init();
+	});
+
 });

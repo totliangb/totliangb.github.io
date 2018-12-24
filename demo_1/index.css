@@ -16,6 +16,11 @@ body, div {
 
 	top: 0px;
 	left: 0px;
+
+	color: #ffffff;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .item-flag {
 	background-color: #000000;

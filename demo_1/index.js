@@ -1,5 +1,8 @@
 $(function() {
 
+	var Item_obj = $(".main-content");
+	var Pic_item_obj = Item_obj.find(".pic-item");
+
 	// 获取图片信息
 	function init(){
 		var imgData;
@@ -127,7 +130,7 @@ $(function() {
 			realHeight = newData[nowIndex][1];
 			realLeft = newData[nowIndex][2];
 
-			var now_col_item_other = $(".main-content").find(".pic-item").eq(k);
+			var now_col_item_other = Pic_item_obj.eq(k);
 			// console.log(now_col_item_other);
 			now_col_item_other.css('width',realWidth+'px');
 			now_col_item_other.css('height',realHeight+'px');
@@ -137,6 +140,15 @@ $(function() {
 			now_col_item_other.css('top',top+'px');
 			nowIndex++;
 		};
+		var item_h = newData[0][1];
+		if (top == 0) {
+			var old_h = 0
+		}else{
+			var old_h = Item_obj.attr('h');
+		}
+		var mc_h = (old_h*1+item_h*1);
+		Item_obj.css('height',mc_h+'px');
+		Item_obj.attr('h',mc_h);
 
 		console.log('-----------'+' updateLayer end '+'----------------');
 	}
@@ -155,7 +167,7 @@ $(function() {
 		var margin_item = 3;
 
 		// 容器的总宽度值
-		var screen_width = $(".main-content").width();
+		var screen_width = Item_obj.width();
 
 		// var x = 0;
 		// for (var i = 0; i < _cols_item_num.length; i++) {
@@ -251,7 +263,6 @@ $(function() {
 				}	
 			}
 		});
-
 	}
 
 	init();

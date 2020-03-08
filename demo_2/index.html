@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>九阴答题器</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<style type="text/css">
+	div{
+		box-sizing: border-box;
+	}
+	.box{
+		text-align: center;
+	}
+	input{
+		width: 300px;
+		height: 50px;
+		font-size: 20px;
+		font-weight: bold;
+		padding: 0 10px;
+	}
+	.show-answer{
+		border: 1px solid #ccc;
+		padding: 10px;
+		background: #000000;
+		color: #ffffff;
+	}
+	.show-answer .answer-title{
+		font-size: 23px;	
+	}
+	.show-answer .answer-body{
+		font-weight: bold;
+		border-bottom: 3px solid #cccccc;
+		font-size: 26px;
+		color: yellow;
+	}
+	.show-answer .answer-body:last-child{
+		border-bottom: none;
+	}
+	.show-answer .notfound,.show-answer .showtips{
+		font-size: 26px;
+	}
+	button{
+		width: 80px;
+		height: 50px;
+		font-size: 20px;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+	.search{
+		background: #000000;
+		color: #ffffff;
+		border: 1px solid #ffffff;
+	}
+	.last-update-time{
+		display: block;
+		margin-top: 60px;
+		font-weight: bold;
+		font-size: 12px;
+	}
+	.tips{
+		font-size: 10px;
+		color: red;
+	}
+</style>
+<script type="text/javascript" src="./data/answer.json"></script>
+<body>
+	<div class="box">
+		<h1>九阴答题器</h1>
+		<div>
+			<div>
+				<h2>答案展示</h2>
+				<div class="show-answer">
+					<!-- 展示答案 -->
+					<div class="showtips">这里展示答案</div>
+				</div>
+			</div>
+			<div>
+				<h2>输入关键词</h2>
+				<small class="tips">(建议输入两个以上的关键字)</small>
+				<div>
+					<input type="text" name="keywords" autocomplete="off" />
+				</div>
+				<button class="search">搜索</button>
+				<button class="clear">清除</button>
+			</div>
+			<small class="last-update-time"></small>
+		</div>
+	</div>
+</body>
+<script src="./data/jquery.js"></script>
+<script type="text/javascript" src="./data/answer.js"></script>
+</html>
